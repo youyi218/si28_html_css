@@ -1,6 +1,17 @@
+body {
+    margin: 0;
+}
+
+.container-hide-title {
+    display: grid;
+    grid-template-columns: repeat(5, 20vw);
+    grid-template-rows: repeat(15, 20vh);
+
+}
+
 .container {
     display: grid;
-    grid-template-columns: 150px auto auto auto auto;
+    grid-template-columns: 200px auto auto auto auto;
     grid-template-rows: 80px auto auto auto auto 50px ;
     grid-template-areas:
             "header header header header header"
@@ -12,9 +23,14 @@
 }
 
 .sidebar {
+    height: 100%;
     grid-area: sidebar;
     background-color: #ecf0f1;
-    padding: 15px 15px;
+}
+
+.sub-sidebar {
+    position: sticky;
+    top: 0;
 }
 
 .header {
@@ -35,12 +51,22 @@
 }
 
 .button-sidebar {
-    width: 120px;
+    text-decoration: none;
+    box-sizing: border-box;
+    width: 100%;
     color: #2c3e50;
-    padding: 15px 0px 15px 0px;
+    padding: 15px 15px 15px 15px;
     text-align: left;
     display: inline-block;
     font-size: 16px;
+}
+
+.button-sidebar:hover {
+    background-color: antiquewhite;
+}
+
+.sub-button {
+    padding: 5px 15px 5px 22px;
 }
 
 page-title {
@@ -56,4 +82,58 @@ page-title {
     color: #2c3e50;
     font-family: 'Courier New', serif;
     margin: 10px;
+}
+
+img.centered {
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+}
+
+.transition{
+    transition-property: font-size, color;
+    transition-duration: 2s;
+    transition-timing-function: cubic-bezier(0.2, 0.8, 0.8, 1.5);
+}
+
+.transition:hover {
+    color: #F48024;
+    font-size: 80px;
+}
+
+@keyframes swing {
+    20% {
+        transform-origin: 50% -500%;
+       transform: rotate(50deg);}
+
+    50% {
+        transform-origin: 50% -500%;
+        transform: rotate(-38deg);}
+
+    76% {transform-origin: 50% -500%;
+        transform: rotate(20deg);}
+
+    to {transform-origin: 50% -500%;
+        transform: rotate(0deg);    }
+}
+
+.swing {
+
+    animation-name: swing;
+}
+
+.animated {
+    display: inline-block;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+
+.title-animation:hover {
+    animation-play-state: running;
+    animation: swing;
+    animation-duration: 2s;
+}
+
+.title-animation {
+    display: inline-block;
 }

@@ -7,13 +7,18 @@
 </head>
 <body>
     <div class="container">
-        <nav class="sidebar">
+        <div class="sidebar">
+            <nav class="sub-sidebar">
             <a href="#section-sommaire" class="button-sidebar">Sommaire</a>
+                <a href="#section_video" class="button-sidebar sub-button">Insérer une vidéo</a>
+                <a href="#section_musique" class="button-sidebar sub-button">Insérer une musique</a>
+                <a href="#section_image" class="button-sidebar sub-button">Insérer une image</a>
             <a href="#section-html" class="button-sidebar">Base de HTML</a>
             <a href="#section-grid" class="button-sidebar">CSS: Grid</a>
             <a href="#section-flexbox" class="button-sidebar">CSS: Flexbox</a>
             <a href="#section-animations" class="button-sidebar">CSS: Animations</a>
-        </nav>
+            </nav>
+        </div>
         <header class="header">
             <page-title>
                 Une présentation (très)bref sur HTML/CSS
@@ -58,20 +63,68 @@
                 <code>
                     &lt;element_exemple id="" class="" width="" src=""&gt;&lt;/element_exemple&gt;
                 </code>
+                <section id="section_video">
+                    <h4>Insérer une vidéo</h4>
+                    <p>
+                        Lien Youtube <br />
+                        <embed width="425" , height="500" src="http://www.youtube.com/embed/wkhRnmLxKH4"></embed>
+                        <object width="425" , height="500" data="http://www.youtube.com/embed/wkhRnmLxKH4"></object>
+                        <iframe width="425" , height="500" src="http://www.youtube.com/embed/wkhRnmLxKH4"></iframe>
+                        Vidéo stockée sur l'ordinateur <br />
+                        <!--<video width="400" controls>-->
+                        <!--<source src="videoplayback.mp4", type="video/mp4" >-->
+                        <!--</video>-->
+                    </p>
+                </section>
+                <section id="section_musique">
+                    <h4>Insérer une musique</h4>
+                    <p>
+                        <audio controls="controls">
+                            <!--source src="song.ogg" type="audio/ogg" />-->
+                            <source src="hilight-tribe-esperanza.mp3" type="audio/mpeg" />
+                            Your browser does not support the audio element.
+                        </audio>
+
+                        <audio autoplay>
+                            <source src="oh-pretty-woman.ogg" type="audio/ogg" />
+                            <source src="oh-pretty-woman.mp3" type="audio/mpeg" />
+                            Your browser does not support the audio element.
+                        </audio>
+                    </p>
+                </section>
+                <section id="section_image">
+                    <h4>Insérer une image</h4>
+                        <img class="centered" width="50%" height="50%" src="https://upload.wikimedia.org/wikipedia/fr/thumb/4/45/Logo_UTC_2018.svg/1280px-Logo_UTC_2018.svg.png" alt="Black Panther" border="5" />
+                </section>
             </section>
             <section id="section-grid">
                 <h2 class="section-title">
                     CSS: Grid
                 </h2>
+                <p>
+                    <a href="https://css-tricks.com/snippets/css/complete-guide-grid/"> Tutoriel Grid </a>
+                </p>
+                <p>
+                    Container / Item
+                </p>
             </section>
             <section id="section-transitions">
-                <h2 class="section-title">
+                <h2 class="section-title transition">
                     CSS: Transitions
                 </h2>
+                <p> Les transitions CSS vous permettent de choisir : </p>
+                <ul>
+                    <li>les propriétés à animer en les listant explicitement</li>
+                    <li>le début de l'animation</li>
+                    <li>la durée de l'animation</li>
+                    <li>la façon dont la transition s'exécutera</li>
+                </ul>
             </section>
-            <section id="section-animations">
-                <h2 class="section-title">
+            <section id="section-animations" class="section-title">
+                <h2>
+                    <div class="title-animation">
                     CSS: Animations
+                    </div>
                 </h2>
             </section>
         </div>
